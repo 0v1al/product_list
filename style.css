@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, rgb(18, 143, 91), rgb(7, 168, 163)); 
+    font-family:  Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f4f4f4;
+    overflow: hidden;
+}
+
+#list-form{
+    margin: 2rem 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container h1{
+    margin: 3rem 0 2rem 0;
+    font-weight: 600;
+    font-size: 3rem;
+    word-spacing: .9rem;
+}
+
+.container h1 i{
+    padding: 0 .9rem 0 0;
+    color: #053d41;
+}
+
+input[type=text]{
+    width: 55%;
+    height: 1.5rem;
+    padding: 1rem .7rem;
+    margin: 1.3rem 0;
+    border: none;
+    border-bottom: .05rem solid #f4f4f4;
+    outline: none;
+    color: #f4f4f4;
+    background: transparent;
+    font-size: .9rem;
+}
+
+input[type=text]::placeholder{
+    color: #f4f4f4;
+    font-size: 1rem;
+}
+
+input[type=submit], .submit{
+    width: 55%;
+    padding: .5rem;
+    margin-top: 3rem;
+    color: #f4f4f4;
+    background-color: #053d41;
+    border: none;
+    border-radius: .1rem;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+input[type=submit]:hover, .submit:hover{
+    background-color: #042b2e;
+}
+.submit i{
+    padding: 0 .4rem 0 0;
+}
+
+input[type=text]:focus + .sep{
+    transform: scaleX(1) translateY(-2px);
+    opacity: 1;
+}
+
+.sep{
+    height: .125rem;
+    width: 55%;
+    background-color: #053d41;
+    display: block;
+    transform-origin: 50%;
+    transition: all .3s ease;
+    transform: scaleX(0) translateY(-2px);
+    opacity: 0;
+    margin-top: -1.25rem;
+}
+
+.list-output{
+    width: 55%; 
+}
+
+.aliment-li{
+    list-style-type: none;
+}
+
+.aliment-span{
+    font-weight: 600;
+}
+
+.aliment-li:nth-child(4)::after{
+    content: "";
+    display: block;
+    margin: .5rem 0 0 0;
+    height: 1px;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+}
+
+.aliment-ul{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #053d41;
+    margin: 1rem 0;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,.3);
+    border-radius: .1rem;
+}
+
+footer{
+    position: relative;
+    height: 50px;
+    bottom: 0;
+    margin: 2rem 0 0 0 !important;
+    text-align: center;
+    color: #f4f4f4;
+}
+footer i{
+    line-height: 50px;
+}
+
+.alert{
+    width: 50%;
+    height: 2.5rem;
+    position: absolute;
+    top: 8rem;
+    color: #000;
+    text-align: center;
+    line-height: 2.5rem;  
+}
+
+.alert-red{
+    background-color: rgba(214, 8, 8, 0.74);
+    color: #f4f4f4;
+}
+
+.alert-blue{
+    background-color: rgba(4, 41, 90, 0.678);
+    color: #f4f4f4;
+}
+
+.btn-li{
+    list-style-type: none;
+    float: right;
+}
+
+.btnDelete{
+    border:none;
+    outline: none;
+    background-color: rgba(214, 8, 8, 0.74);
+    color: #f4f4f4;
+    padding: .3rem .8rem;
+    margin-top: 1.3rem;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    font-size: 1rem;
+    border-radius: .1rem;
+}
+
+.btnDelete:hover{
+    background-color: rgba(139, 6, 6, 0.74);
+}
+
+.btnDelete i{
+    padding:0 .4rem 0 0;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 700px){
+    input[type=text], input[type=submit], .submit{
+        width: 100% !important;
+    }
+    .list-output{
+        width: 100%;
+    }
+    .alert{
+        width: 90%;
+    }
+    .sep{
+        width: 100%;
+    }
+    .container h1{
+        font-size: 2.5rem;
+    }
+}
+
+
